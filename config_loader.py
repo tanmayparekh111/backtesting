@@ -96,9 +96,9 @@ def load_config(config_file: str = "config.json") -> UserConfig:
 
     except Exception as ex:
         if err_msg:
-            logger.error(f"Error at config loading, reason is: {err_msg}")
+            logger.info(f"Error at config loading, reason is: {err_msg}")
         else:
-            logger.error(f"Error at config loading, reason is: {ex}")
+            logger.info(f"Error at config loading, reason is: {ex}")
         raise ex
 
     return config
