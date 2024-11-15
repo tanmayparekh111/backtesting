@@ -4,6 +4,9 @@ class Action:
     BUY = "BUY"
     SELL = "SELL"
 
+class ContractType:
+    CE = "CE"
+    PE = "PE"
 
 class IndexType:
     BANKNIFTY = "BANKNIFTY"
