@@ -17,6 +17,9 @@ class TargetSlType:
     INSTRUMENTPERCENT = "INSTRUMENTPERCENT"
 
 class Month(Enum):
+    """
+    No longer in use.
+    """
     JAN = 1
     FEB = 2
     MAR = 3
