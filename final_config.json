@@ -1,0 +1,12 @@
+{
+  "entry_time": "09:17", 
+  "exit_time": "15:15",
+  "from_date": "2023-01-01",
+  "to_date": "2023-01-10",
+  "backtesting_symbol": "BANKNIFTY",
+  "action": ["BUY", "SELL"],
+  "contract_type": ["CE", "PE"],
+  "target": ["50", "60"],
+  "stoploss": ["25", "30"],
+  "target_sl_type": ["INSTRUMENTPOINT","INSTRUMENTPERCENT"]
+}

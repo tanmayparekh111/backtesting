@@ -1,0 +1,14 @@
+{
+  "entry_time": "09:17",
+  "exit_time": "15:15",
+  "from_date": "2023-01-01",
+  "to_date": "2023-01-10",
+  "backtesting_symbol": "BANKNIFTY",
+  "action": "BUY",
+  "target": "200",
+  "stoploss": "100",
+  "target_sl_type": "INSTRUMENTPOINT"
+}
+  
+
+  
