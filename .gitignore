@@ -1,0 +1,8 @@
+# Ignore all .csv files (or any other dataset file type)
+*.csv
+*.feather/
+
+data_bnf_nf/
+results/
+
+__pycache__/
