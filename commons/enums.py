@@ -4,6 +4,9 @@ class Action:
     BUY = "BUY"
     SELL = "SELL"
 
+class ContractType:
+    CE = "CE"
+    PE = "PE"
 
 class IndexType:
     BANKNIFTY = "BANKNIFTY"
@@ -42,4 +45,7 @@ class CoreFileName(Enum):
     YEAR_2021 = "_"
     YEAR_2022 = "_"
     YEAR_2023 = "_JF_FNO_"
-    
+
+class InstrumentStrikeGap:
+    BANKNIFTY = 100
+    NIFTY = 50

@@ -56,14 +56,20 @@ def get_thursday_based_weekly_expiry(trading_date) -> str:
     This function is used to find the nearest thursday on any given `trading_day`,
     but it also filter it based on the next `next_thursday` if it is holidaty it will -1 it.
     """
+    try:
+        expiry_date = None
 
-    expiry_date = get_next_thursday(trading_date)
-    while check_holiday(expiry_date):
-        expiry_date = expiry_date - timedelta(days=1)
-        # TODO: Here if trading day > expiry
-        # in that case it should take a next expiry.
+        expiry_date = get_next_thursday(trading_date)
+        while check_holiday(expiry_date):
+            expiry_date = expiry_date - timedelta(days=1)
+            # TODO: Here if trading day > expiry
+            # in that case it should take a next expiry.
 
-    formatted_expiry_date = expiry_date.strftime("%d%b%y").upper()
+        formatted_expiry_date = expiry_date.strftime("%d%b%y").upper()
+
+    except Exception as ex:
+        logger.info(f"issue in finding weekly expiry, and the reson is{ex}")
+
     return formatted_expiry_date
 
 def get_dataset_path_df(config: UserConfig):
@@ -138,6 +144,6 @@ def get_dataset_path_df(config: UserConfig):
         path_df = pd.DataFrame(path_dict)
         logger.info("Completed finding dataset path for the backtesting")
     except Exception as ex:
-        logger.info("Erro at dataset path making, reason is: {ex}")
+        logger.info(f"Erro at dataset path making, reason is: {ex}")
 
     return path_df
